@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #ecf1fa;
+  background: #0b1220;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 360px;
+  min-height: 100vh;
+}
+button {
+  font: inherit;
+}
+.app-shell {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  height: 72px;
+  padding: 0 24px;
+  background: #111b2d;
+  border-bottom: 1px solid #243149;
+}
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #68e0c0, #27a9d6);
+  color: #0b1721;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+}
+.topbar h1 {
+  margin: 0;
+  font:
+    600 17px "Space Grotesk",
+    sans-serif;
+  letter-spacing: -0.3px;
+}
+.topbar p {
+  margin: 3px 0 0;
+  color: #8191aa;
+  font-size: 11px;
+}
+.local-badge {
+  margin-left: auto;
+  border: 1px solid #2c695f;
+  border-radius: 20px;
+  padding: 6px 11px;
+  color: #72e3c4;
+  background: #14312e;
+  font-size: 11px;
+  font-weight: 600;
+}
+.workspace {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+.sidebar {
+  width: 278px;
+  flex: 0 0 278px;
+  padding: 28px 18px;
+  background: #111b2d;
+  border-right: 1px solid #243149;
+}
+.eyebrow {
+  margin: 0;
+  color: #6d809b;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+}
+.sidebar h2 {
+  margin: 12px 0 6px;
+  font:
+    600 17px "Space Grotesk",
+    sans-serif;
+}
+.muted {
+  color: #8899b1;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+.component-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #273750;
+  background: #152238;
+  border-radius: 10px;
+  padding: 11px;
+  margin-bottom: 9px;
+}
+.component-card > span {
+  color: #69dfc0;
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+}
+.component-card strong,
+.component-card small {
+  display: block;
+}
+.component-card strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+.component-card small {
+  color: #8798b0;
+  font-size: 10px;
+  margin-top: 3px;
+}
+.notice {
+  margin-top: 28px;
+  border-left: 2px solid #31c9a4;
+  background: #12252c;
+  color: #a4b9c6;
+  padding: 12px;
+  font-size: 10px;
+  line-height: 1.55;
+}
+.canvas-wrap {
+  flex: 1;
+  position: relative;
+}
+.canvas-toolbar {
+  position: absolute;
+  z-index: 5;
+  top: 16px;
+  right: 18px;
+  left: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #8595ac;
+  font-size: 10px;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+.canvas-toolbar button {
+  pointer-events: auto;
+  border: 1px solid #2c3b54;
+  border-radius: 8px;
+  color: #75869e;
+  background: #152238;
+  padding: 8px 12px;
+  font-size: 10px;
+}
+.react-flow__node {
+  border: 1px solid #344760;
+  border-radius: 10px;
+  background: #17263a;
+  color: #eef3fa;
+  padding: 14px 20px;
+  font:
+    600 12px "DM Sans",
+    sans-serif;
+  box-shadow: 0 8px 24px #0003;
+}
+.react-flow__node-input,
+.react-flow__node-output {
+  border-color: #278b7e;
+}
+.react-flow__edge-path {
+  stroke: #55d6b8;
+  stroke-width: 2;
+}
+.react-flow__controls {
+  border: 1px solid #30415a;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: none;
+}
+.react-flow__controls-button {
+  background: #152238;
+  border-bottom-color: #30415a;
+  fill: #c4d1e1;
+}
+.react-flow__controls-button:hover {
+  background: #223550;
+}
+@media (max-width: 680px) {
+  .sidebar {
+    width: 210px;
+    flex-basis: 210px;
+    padding: 20px 12px;
+  }
+  .topbar {
+    padding: 0 14px;
+  }
+  .canvas-toolbar {
+    left: 10px;
+    right: 10px;
+  }
+}
