@@ -1,0 +1,38 @@
+{
+  "name": "cloudplayground-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.22.1",
+    "npm": "10.9.0"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format:check": "prettier --check src index.html vite.config.ts eslint.config.ts tsconfig.json package.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@xyflow/react": "12.12.0",
+    "echarts": "6.1.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "jiti": "2.6.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "eslint": "10.13.0",
+    "globals": "16.2.0",
+    "prettier": "3.9.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.58.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}

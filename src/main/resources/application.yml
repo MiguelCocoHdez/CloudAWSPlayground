@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: cloudplayground
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/cloudplayground}
+    username: ${DATABASE_USERNAME:cloudplayground}
+    password: ${DATABASE_PASSWORD:cloudplayground-local}
+  flyway:
+    enabled: ${DATABASE_MIGRATIONS:false}
+    locations: classpath:db/migration
+  jpa:
+    open-in-view: false
+server:
+  port: ${PORT:8080}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
